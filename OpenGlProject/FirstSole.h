@@ -79,4 +79,3 @@ void DrawSole(int i)
     }
 
 
-

@@ -28,7 +28,7 @@ void changeSize(int w1, int h1)
     glViewport(0, 0, w, h);
 
 	// Set the clipping volume
-	gluPerspective(100,ratio,0.1,50);
+	gluPerspective(120,ratio,0.1,80);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	gluLookAt(x, y, z, 

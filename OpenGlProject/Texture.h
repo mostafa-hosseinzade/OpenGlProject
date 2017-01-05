@@ -53,16 +53,21 @@ BitMapFile *getBMPData(string filename)
 // Load external textures.
 void loadExternalTextures(int ids ,string c)			
 {
+    
    // Local storage for bmp image data.
    BitMapFile *image[1];
    
    // Load the texture.
    image[0] = getBMPData("Textures/"+c); 
-
+   
+   
    // Activate texture index texture[0]. 
    //             // mitavand 1D va 3D ham bashad      texture feAly
    glBindTexture(GL_TEXTURE_2D                     ,   texture[ids]); 
+   
+   
 
+   
    // Set texture parameters for wrapping.
    //parameter hay texture   _S ANd _T AbAd shekl
    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -80,19 +85,21 @@ void loadExternalTextures(int ids ,string c)
                 0, 
 	            //khod shekl     //byte ha mosbat     // dadehay aks
                GL_RGB, GL_UNSIGNED_BYTE,           image[0]->data);
+
 }
 
 
 void setupTextur(){
    // Create texture index array.
    //             teadad     //motagheyer texture
-   glGenTextures(4,        texture); 
+   glGenTextures(5,        texture); 
 
    // Load external texture and generate and load procedural texture.
    loadExternalTextures(0,"floor.bmp");
    loadExternalTextures(1,"pos_y.bmp");
    loadExternalTextures(2,"brick.bmp");
    loadExternalTextures(3,"images.bmp");
+   loadExternalTextures(4,"crosshair.bmp");
 
    // Turn on OpenGL texturing.
    // faAl sazi texture 2D 
