@@ -2,9 +2,11 @@
 static GLfloat yRot = 0.0f;         // Rotation angle for animation
 
 float angle=0.0,deltaAngle = 0.0,ratio;
-float x=0.0f,y=0.0f,z=2.0f;
+float x=0.0f,y=0.0f,z=2.0f,t=0.0f;
 float lx=0.0f,ly=0.0f,lz=-1.0f;
 int deltaMove = 0,h,w;
+float xRotate = 0,yRotate = 0,zRotate = 0;
+float xTranslate = 0,yTranslate = 0,zTranslate = 0;
 static GLint DL;
 
 void changeSize(int w1, int h1)
@@ -28,7 +30,7 @@ void changeSize(int w1, int h1)
     glViewport(0, 0, w, h);
 
 	// Set the clipping volume
-	gluPerspective(120,ratio,0.1,80);
+	gluPerspective(60,ratio,0.1,1250);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	gluLookAt(x, y, z, 

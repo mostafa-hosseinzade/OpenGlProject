@@ -85,9 +85,7 @@ void loadExternalTextures(int ids ,string c)
                 0, 
 	            //khod shekl     //byte ha mosbat     // dadehay aks
                GL_RGB, GL_UNSIGNED_BYTE,           image[0]->data);
-
 }
-
 
 void setupTextur(){
    // Create texture index array.

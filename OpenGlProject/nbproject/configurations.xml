@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>FirstSole.h</itemPath>
       <itemPath>Function.h</itemPath>
+      <itemPath>RotateCameraTest.h</itemPath>
       <itemPath>Texture.h</itemPath>
       <itemPath>camera.h</itemPath>
       <itemPath>header.h</itemPath>
@@ -46,6 +47,8 @@
       </item>
       <item path="Function.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="RotateCameraTest.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Texture.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="camera.h" ex="false" tool="3" flavor2="0">
@@ -80,6 +83,8 @@
       <item path="FirstSole.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Function.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RotateCameraTest.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Texture.h" ex="false" tool="3" flavor2="0">
       </item>

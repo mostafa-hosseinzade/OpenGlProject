@@ -1,27 +1,6 @@
 
 void DrawBox(){
         
-    glPushMatrix();
-    glEnable(GL_TEXTURE_2D);       
-                            // Crosshair  
-                 glDisable(GL_DEPTH_TEST);
-                 glLoadIdentity();
-                 glTranslated(0.0f,0.0f,-35.0f);   
-
-                 glBlendFunc(GL_SRC_ALPHA,GL_ONE);
-
-                 glColor4f(1,1,1,1);
-                 glBindTexture(GL_TEXTURE_2D,texture[4]);
-                 glBegin(GL_QUADS);
-                 glTexCoord2d(1,1); glVertex2f(1,1);
-                 glTexCoord2d(1,0); glVertex2f(1,-1);
-                 glTexCoord2d(0,0); glVertex2f(-1,-1);
-                 glTexCoord2d(0,1); glVertex2f(-1,1);
-                 glEnd();
-
-                 glEnable(GL_DEPTH_TEST);
-            glDisable(GL_TEXTURE_2D);
-    glPopMatrix();
     
     
 	glPushMatrix();
@@ -42,4 +21,40 @@ void DrawBox(){
 		mhSolidCube(4);
 	glPopMatrix();
 
+}
+
+void DrawTargetPointer()
+{
+    
+    glPushMatrix();
+    
+    glTranslatef(x+lx,y+ly,z+lz);
+     glRotatef(t,0,1,0);
+        
+        glPushMatrix();
+        glScalef(2.5,0.3,1);
+        glutSolidCube(0.1);
+        glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(0.2,0.16,0);
+        glRotatef(90,0,0,1);
+        glScalef(2.5,0.3,1);
+        glutSolidCube(0.1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(0.2,-0.16,0);
+        glRotatef(90,0,0,1);
+        glScalef(2.5,0.3,1);
+        glutSolidCube(0.1);
+        glPopMatrix();
+
+        glPushMatrix();
+        glTranslatef(0.4,0,0);
+        glScalef(2.5,0.3,1);
+        glutSolidCube(0.1);
+        glPopMatrix();
+        
+    glPopMatrix();
 }
