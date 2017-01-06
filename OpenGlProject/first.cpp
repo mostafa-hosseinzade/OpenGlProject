@@ -9,6 +9,7 @@
 #include <GL/glext.h>
 #include <cstdlib>
 #include <fstream>
+#include <string>
 using namespace std;
 #include "FirstSole.h";
 #include "Texture.h";
