@@ -37,7 +37,7 @@ void RenderScene(void) {
 
     //draw sole
     DrawBox();
-    DrawTargetPointer();
+    //DrawTargetPointer();
     DrawSole(0);
     DrawSole(1);
     DrawSole(2);
