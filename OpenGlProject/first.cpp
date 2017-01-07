@@ -13,10 +13,10 @@
 using namespace std;
 #include "FirstSole.h";
 #include "Texture.h";
-#include "specialObject.h";
 #include "header.h";
-#include "camera.h";    
+#include "specialObject.h";
 #include "Function.h";
+#include "camera.h";    
 
 void RenderScene(void) {
 
@@ -32,12 +32,11 @@ void RenderScene(void) {
     glShadeModel(GL_SMOOTH);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glTranslatef(xTranslate,yTranslate,zTranslate);
-
-
+    
+    
     //draw sole
     DrawBox();
-    //DrawTargetPointer();
+    DrawBoxSections();
     DrawSole(0);
     DrawSole(1);
     DrawSole(2);
@@ -54,7 +53,7 @@ int main(int argc, char **argv) {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("SnowMen from Lighthouse3D");
+    glutCreateWindow("First Person Shooting");
     // register all callbacks
     glutKeyboardFunc(processNormalKeys);
     glutKeyboardUpFunc(processNormalUpKeys);
@@ -68,7 +67,7 @@ int main(int argc, char **argv) {
     glutDisplayFunc(RenderScene);
     SetupRC();
     glEnable(GL_TEXTURE_2D);
-    glutTimerFunc(33, TimerFunction, 1);
+    glutTimerFunc(60, TimerFunction, 2);
     glutReshapeFunc(changeSize);
 
     cout << "\n The camera move by Arrow keys\n";

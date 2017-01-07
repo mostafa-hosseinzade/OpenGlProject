@@ -90,7 +90,7 @@ void loadExternalTextures(int ids ,string c)
 void setupTextur(){
    // Create texture index array.
    //             teadad     //motagheyer texture
-   glGenTextures(5,        texture); 
+   glGenTextures(8,        texture); 
 
    // Load external texture and generate and load procedural texture.
    loadExternalTextures(0,"floor.bmp");
@@ -98,7 +98,9 @@ void setupTextur(){
    loadExternalTextures(2,"brick.bmp");
    loadExternalTextures(3,"images.bmp");
    loadExternalTextures(4,"crosshair.bmp");
-
+   loadExternalTextures(5,"HumenTarget2.bmp");
+   loadExternalTextures(6,"HumenTarget.bmp");
+   loadExternalTextures(7,"HumenTarget3.bmp");
    // Turn on OpenGL texturing.
    // faAl sazi texture 2D 
    glEnable(GL_TEXTURE_2D);

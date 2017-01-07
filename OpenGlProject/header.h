@@ -1,13 +1,17 @@
 #define NUM_SPHERES      50
 static GLfloat yRot = 0.0f;         // Rotation angle for animation
-
 float angle=0.0,deltaAngle = 0.0,ratio;
 float x=0.0f,y=0.0f,z=2.0f,t=0.0f;
 float lx=0.0f,ly=0.0f,lz=-1.0f;
 int deltaMove = 0,h,w;
-float xRotate = 0,yRotate = 0,zRotate = 0;
-float xTranslate = 0,yTranslate = 0,zTranslate = 0;
+float CTR = 0.080,CTG = 0.620,CTB = 0.444,CP = 0;
+int moveCamera = 1;
+float Postion[10][2][2];
 static GLint DL;
+#define FONT			GLUT_BITMAP_HELVETICA_18
+#define CHAR_W			1
+float xDrawPoint =0,YDrawPoint = 0,zDrawPoint = 0,DrawPointShoot=0;
+float Score = 0;
 
 void changeSize(int w1, int h1)
 	{
@@ -27,7 +31,7 @@ void changeSize(int w1, int h1)
 	glLoadIdentity();
 	
 	// Set the viewport to be the entire window
-    glViewport(0, 0, w, h);
+        glViewport(0, 0, w, h);
 
 	// Set the clipping volume
 	gluPerspective(60,ratio,0.1,1250);
@@ -47,4 +51,20 @@ void SetupRC() {
          
     // Draw everything as wire frame
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+}
+
+void emitString(char *s, int tx, int ty)
+{
+  float xF,yF;
+
+  xF = tx;
+  yF = ty;
+  while( *s ) {
+    
+      glRasterPos2i(xF,yF);
+      glutBitmapCharacter(FONT,*s);
+      xF += CHAR_W;
+   
+    ++s;
+  }
 }

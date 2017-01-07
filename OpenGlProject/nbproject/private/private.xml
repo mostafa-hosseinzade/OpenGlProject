@@ -8,8 +8,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/first.cpp</file>
+            <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/Function.h</file>
             <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/header.h</file>
-            <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/RotateCameraTest.h</file>
+            <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/Texture.h</file>
+            <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/camera.h</file>
+            <file>file:/var/www/html/Git/OpenGlProject/OpenGlProject/specialObject.h</file>
         </group>
     </open-files>
 </project-private>
